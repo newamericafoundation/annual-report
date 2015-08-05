@@ -1,0 +1,83 @@
+.ar {
+
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+
+	&__pages {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+
+		&:after {
+			content: '';
+		    display: block;
+		    clear: both;
+		    height: 0;
+		}
+	}
+
+	&__page {
+
+		overflow: hidden;
+		margin: 0;
+		background-color: darken(#2dbbb3, 5);
+		width: 100%;
+		display: inline-block;
+		float: left;
+		padding: 50px;
+
+		&__content {
+			background-color: #2dbbb3;
+			width: 100%;
+			height: 100%;
+			display: table;
+
+			div {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+				font-size: 72px;
+				color: white;
+				opacity: 0.4;
+			}
+			
+		}
+
+		&__subpages {
+			width: 100%;
+			height: 100%;
+		}
+
+	}
+
+	&__nav {
+
+		&__button {
+
+			cursor: pointer;
+			height: 35px;
+			width: 100%;
+			position: fixed;
+			text-align: center;		
+
+			&--left { top: 0px; }
+			&--right { bottom: 28px; }
+
+			opacity: 0.6;
+			&:hover { opacity: 1; }
+
+			.button {
+				margin: auto;
+				padding: auto;
+				width: 35px;
+				display: inline-block;
+			}
+
+		}
+
+	}
+
+}

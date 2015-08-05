@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>NAF Annual Report</title>
+	<link rel="stylesheet" type="text/css" href="public/assets/styles/site.css">
+</head>
+<body>
+
+	<div class="wrapper"></div>
+
+	<script src="public/assets/scripts/vendor.js"></script>
+	<script src="public/assets/scripts/components.js"></script>
+
+	<script>
+		var el = document.getElementsByClassName('wrapper')[0],
+			c = React.createElement(Comp.Layout, { pages: [ 
+				{ content: 'NAF' }, 
+				{ content: 'Annual' }, 
+				{ content: 'Report' }
+			]});
+		React.render(c, el);
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "naf-annual-report",
+  "version": "0.0.0",
+  "authors": [
+    "pickled-plugins <szerzo.peter@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.13.3",
+    "flipsnap": "~0.6.2",
+    "jquery": "~2.1.4",
+    "normalize.css": "~3.0.3",
+    "jquery-mousewheel": "~3.1.13"
+  }
+}

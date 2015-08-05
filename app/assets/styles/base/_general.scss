@@ -1,0 +1,25 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "SimplonNorm-Regular-WebS";
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media print {
+    * {
+        overflow: visible !important;
+    }
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
