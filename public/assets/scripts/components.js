@@ -161,14 +161,21 @@ Comp.Pages = (function (_React$Component3) {
 		key: "render",
 		value: function render() {
 
-			var pageHeight = document.body.offsetHeight,
-			    style = {
-				transform: "translate3d(0, -" + this.props.activePageIndex * pageHeight + "px, 0)",
+			var style = {
+				transform: this.getTransform(),
 				transition: 'transform 500ms cubic-bezier(0, 0, 0.25, 1)',
 				height: 100 * this.props.pages.length + "%"
 			};
 
 			return React.createElement("ul", { className: "ar__pages", ref: "container", style: style }, this.renderPages());
+		}
+	}, {
+		key: "getTransform",
+		value: function getTransform() {
+			var pageHeight = document.body.offsetHeight,
+			    transform = "translate3d(0, -" + this.props.activePageIndex * pageHeight + "px, 0)";
+			console.log(transform);
+			return transform;
 		}
 	}, {
 		key: "renderPages",
