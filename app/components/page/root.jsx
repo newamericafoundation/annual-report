@@ -80,19 +80,14 @@ Comp.Page = class extends React.Component {
 						</div>
 						<div className='split__2'>
 							<div>
-								<p>{ this.getPageContent() }</p>
+								<p dangerouslySetInnerHTML={{__html: this.props.page.content}}>
+								</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</li>
 		);
-	}
-
-	getPageContent() {
-		var content = this.props.page.content;
-		// content.replace();
-		return content;
 	}
 
 }

@@ -42,7 +42,12 @@
 			bottom: 15px;
 		}
 
+		&__text-link, &__icon-link {
+			border: none;
+		}
+
 		&__text-link {
+			
 			display: none;
 			@include bp-w-md {
 				display: block;
@@ -152,7 +157,6 @@
 		top: 0px;
 		bottom: 0px;
 		left: calc(50% - 2px);
-		// background-color: #fffaef;
 		background: -webkit-linear-gradient(top, #2ebcb3, #2ebcb3 75px, #fffaef 150px, #fffaef calc(100% - 150px), #2ebcb3 calc(100% - 75px), #2ebcb3);
 
 	}

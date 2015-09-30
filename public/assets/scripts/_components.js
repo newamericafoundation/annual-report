@@ -446,23 +446,12 @@ Comp.Page = (function (_React$Component9) {
 							React.createElement(
 								'div',
 								null,
-								React.createElement(
-									'p',
-									null,
-									this.getPageContent()
-								)
+								React.createElement('p', { dangerouslySetInnerHTML: { __html: this.props.page.content } })
 							)
 						)
 					)
 				)
 			);
-		}
-	}, {
-		key: 'getPageContent',
-		value: function getPageContent() {
-			var content = this.props.page.content;
-			// content.replace();
-			return content;
 		}
 	}]);
 
