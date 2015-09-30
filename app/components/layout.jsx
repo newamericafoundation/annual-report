@@ -1,5 +1,5 @@
 var Comp = {
-	Buttons: {}
+	Icons: {}
 };
 
 Comp.Layout = class extends React.Component {
@@ -18,11 +18,17 @@ Comp.Layout = class extends React.Component {
 	render() {
 		return (
 			<div className='ar'>
-				<Comp.Pages pages={this.props.pages} activePageIndex={this.state.activePageIndex} />
+				<Comp.Header />
+				<Comp.Pages 
+					pages={this.props.pages} 
+					activePageIndex={this.state.activePageIndex} 
+				/>
 				<div className='ar__nav'>
 					{ this.renderTopButton() }
 					{ this.renderBottomButton() }
 				</div>
+				<div className='ar__mid-bar'></div>
+				<Comp.Footer />
 			</div>
 		);
 	}
@@ -32,7 +38,7 @@ Comp.Layout = class extends React.Component {
 		if (this.isUserOnFirstPage()) { return; }
 		return (
 			<div className='ar__nav__button ar__nav__button--left' onClick={ this.changeActivePage.bind(this, -1) }>
-				<Comp.Buttons.Arrow rotate={90} />
+				<Comp.Icons.Arrow rotate={90} />
 			</div>
 		);
 	}
@@ -42,7 +48,7 @@ Comp.Layout = class extends React.Component {
 		if (this.isUserOnLastPage()) { return; }
 		return (
 			<div className='ar__nav__button ar__nav__button--right' onClick={ this.changeActivePage.bind(this, +1) }>
-				<Comp.Buttons.Arrow rotate={270} />
+				<Comp.Icons.Arrow rotate={270} />
 			</div>
 		);
 	}
@@ -77,7 +83,7 @@ Comp.Layout = class extends React.Component {
 
 	// Disable mouse wheel for a specified interval.
 	disableMouseWheelForInterval() {
-		var interval = 400,
+		var interval = 600,
 			self = this;
 		this._allowMouseWheelInteraction = false;
 		setTimeout(function() { self._allowMouseWheelInteraction = true }, interval);

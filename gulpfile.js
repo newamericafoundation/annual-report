@@ -9,16 +9,18 @@ var gulp = require('gulp'),
 var opt = { es6module: true };
 
 var jsSource = {
+	source: [
+		'app/assets/scripts/app.js'
+	],
 	comp: [
 		'app/components/layout.jsx',
-		'app/components/buttons/**/*.jsx',
+		'app/components/general/**/*.jsx',
 		'app/components/page/root.jsx'
 	],
 	vendor: [
 		'bower_components/react/react.js',
 		'bower_components/jquery/dist/jquery.js',
-		'bower_components/jquery-mousewheel/jquery.mousewheel.js',
-		'bower_components/flipsnap/flipsnap.js'
+		'bower_components/jquery-mousewheel/jquery.mousewheel.js'
 	]
 };
 
@@ -31,10 +33,18 @@ gulp.task('js-vendor', function() {
 gulp.task('js-comp', function() {
 	return gulp.src(jsSource.comp)
 		.pipe(concat('components.jsx'))
-		.pipe(react(opt))
 		.pipe(babel())
 		.pipe(gulp.dest('public/assets/scripts'));
 });
+
+gulp.task('js-source', function() {
+	return gulp.src(jsSource.source)
+		.pipe(concat('source.js'))
+		.pipe(babel())
+		.pipe(gulp.dest('public/assets/scripts'));
+});
+
+gulp.task('js', [ 'js-vendor', 'js-comp', 'js-source' ]);
 
 gulp.task('css', function() {
 	return gulp.src('app/assets/styles/site.scss')
@@ -43,6 +53,6 @@ gulp.task('css', function() {
 }); 
 
 gulp.task('watch', function() {
-	gulp.watch('app/components/**/*.jsx', [ 'js-comp' ]);
+	gulp.watch([ 'app/components/**/*.jsx', 'app/assets/scripts/**/*.js' ], [ 'js' ]);
 	gulp.watch('app/assets/styles/**/*.scss', [ 'css' ]);
 });

@@ -1,0 +1,17 @@
+@mixin bp-w($w) {
+    @media only screen and (min-width: $w) {
+        @content;
+    }
+}
+
+@mixin bp-w-md {
+	@include bp-w(640px) {
+		@content;
+	}
+}
+
+@mixin bp-w-lg {
+	@include bp-w(800px) {
+		@content;
+	}
+}

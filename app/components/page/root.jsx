@@ -6,33 +6,43 @@ Comp.Pages = class extends React.Component {
 	}
 
 	render() { 
-
-		var style = {
-			transform: this.getTransform(),
-			transition: 'transform 500ms cubic-bezier(0, 0, 0.25, 1)',
-			height: `${100 * this.props.pages.length}%`
-		};
-
 		return (
-			<ul className='ar__pages' ref='container' style={style}>
+			<ul className='ar__pages' ref='container' style={this.getStyle()} onScroll={this.handleScroll.bind(this)}>
 				{ this.renderPages() }
 			</ul>
 		);
 
 	}
 
+	getStyle() {
+		return {
+			transform: this.getTransform(),
+			transition: 'transform 500ms cubic-bezier(0, 0, 0.25, 1)',
+			height: `${100 * this.props.pages.length}%`
+		};
+	}
+
 	getTransform() {
 		var pageHeight = document.body.offsetHeight,
 			transform = `translate3d(0, -${this.props.activePageIndex * pageHeight}px, 0)`;
-		console.log(transform);
 		return transform;
+	}
+
+	handleScroll(e) {
+		console.log(e);
 	}
 
 	renderPages() {
 		var pagesCount = this.props.pages.length;
-		return this.props.pages.map(function(page, i) {
+		return this.props.pages.map((page, i) => {
+			console.log(i === this.props.activePageIndex);
 			return (
-				<Comp.Page page={page} pagesCount={pagesCount} key={i} />
+				<Comp.Page 
+					page={page}
+					pagesCount={pagesCount}
+					isActive={i === this.props.activePageIndex}
+					key={i} 
+				/>
 			);
 		});
 	}
@@ -57,15 +67,32 @@ Comp.Page = class extends React.Component {
 		var style = {
 			height: `${100 / this.props.pagesCount}%`
 		};
+		var className = this.props.isActive ? 'ar__page ar__page--active' : 'ar__page';
 		return (
-			<li className='ar__page' style={ style } >
+			<li className={ className } style={ style } >
 				<div className='ar__page__content'>
-					<div>
-						{ this.props.page.content }
+					<div className='split'>
+						<div className='split__1'>
+							<div>
+								<h1>{ this.props.page.title }</h1>
+								<div className='split__right-circle'></div>
+							</div>
+						</div>
+						<div className='split__2'>
+							<div>
+								<p>{ this.getPageContent() }</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</li>
 		);
+	}
+
+	getPageContent() {
+		var content = this.props.page.content;
+		// content.replace();
+		return content;
 	}
 
 }

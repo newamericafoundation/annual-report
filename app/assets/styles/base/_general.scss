@@ -22,4 +22,12 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    // overflow: hidden;
+    background-color: #2ebcb3;
+    background-image: url('../images/2014.png');
+    background-size: 15%;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
 }
+
+svg { fill: #fffaef; }

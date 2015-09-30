@@ -1,0 +1,15 @@
+@mixin transition($str) {
+    -webkit-transition: $str;
+    -moz-transition: $str;
+    -ms-transition: $str;
+    -o-transition: $str;
+    transition: $str;
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
