@@ -7,7 +7,8 @@ Comp.Layout = class extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			activePageIndex: 0
+			activePageIndex: 0,
+			opacity: 0
 		};
 		// This instance variable keeps track of whether mouse wheel interactions are allowed.
 		// It is set to false when mouse wheel interaction happens, and set to true again
@@ -17,7 +18,7 @@ Comp.Layout = class extends React.Component {
 
 	render() {
 		return (
-			<div className='ar'>
+			<div className='ar' style={{opacity: this.state.opacity}}>
 				<Comp.Header />
 				<Comp.Pages 
 					pages={this.props.pages} 
@@ -100,6 +101,7 @@ Comp.Layout = class extends React.Component {
 				}
 			}
 		});
+		this.setState({ opacity: 1 });
 	}
 
 	componentWillUnmount() {

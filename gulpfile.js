@@ -34,7 +34,7 @@ gulp.task('js-vendor', function() {
 
 gulp.task('js-comp', function() {
 	return gulp.src(jsSource.comp)
-		.pipe(concat('_components.js'))
+		.pipe(concat('_components.js', {newLine: ';'}))
 		.pipe(babel())
 		.pipe(gulp.dest('public/assets/scripts'));
 });

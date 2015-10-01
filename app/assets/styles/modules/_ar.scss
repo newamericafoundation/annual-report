@@ -6,6 +6,8 @@
 	position: relative;
 	overflow: hidden;
 
+	@include transition(all 0.5s);
+
 	&__header, &__footer {
 		position: fixed;
 		left: 30px;
