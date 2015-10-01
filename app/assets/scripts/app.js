@@ -15,15 +15,15 @@
 		},
 		{
 			title: "Award Winning Ideas",
-			content: "New America fellow Anand Gopal’s <a href='https://www.newamerica.org/fellows/no-good-men-among-the-living/'><i>No Good Men Among the Living</i></a> was a 2014 National Book Award Finalist. Along with New America fellow Dana Goldstein’s <a href='https://www.newamerica.org/fellows/the-teacher-wars/'><i>The Teacher Wars</i></a>, it was listed among <i>The New York Times’s</i> <a href='http://www.nytimes.com/2014/12/07/books/review/100-notable-books-of-2014.html'>100 notable books of 2014.</a> New America fellows Brigid Schulte’s <a href='https://www.newamerica.org/fellows/overwhelmed/'><i>Overwhelmed</i></a> and Chris Leonard’s <a href='https://www.newamerica.org/fellows/the-meat-racket/'>The Meat Racket</a> were selected by The Washington Post as <a href='https://www.washingtonpost.com/entertainment/books/50-notable-works-of-nonfiction/2014/11/20/51afca5e-3dc6-11e4-b03f-de718edeb92f_story.html'>notable nonfiction books of 2014</a>."
+			content: "New America fellow Anand Gopal’s <a href='https://www.newamerica.org/fellows/no-good-men-among-the-living/'><i>No Good Men Among the Living</i></a> was a <b>2014 National Book Award Finalist</b>. Along with New America fellow Dana Goldstein’s <a href='https://www.newamerica.org/fellows/the-teacher-wars/'><i>The Teacher Wars</i></a>, it was listed among <i>The New York Times’s</i> <a href='http://www.nytimes.com/2014/12/07/books/review/100-notable-books-of-2014.html'>100 notable books of 2014.</a> New America fellows Brigid Schulte’s <a href='https://www.newamerica.org/fellows/overwhelmed/'><i>Overwhelmed</i></a> and Chris Leonard’s <a href='https://www.newamerica.org/fellows/the-meat-racket/'><i>The Meat Racket</i></a> were selected by The Washington Post as <a href='https://www.washingtonpost.com/entertainment/books/50-notable-works-of-nonfiction/2014/11/20/51afca5e-3dc6-11e4-b03f-de718edeb92f_story.html'>notable nonfiction books of 2014</a>."
 		},
 		{
 			title: "Harnessing the Humanitarian Power of Drones",
-			content: "New America created a new database to <a href='https://www.newamerica.org/the-weekly-wonk/the-once-and-future-drones/'><b>track and highlight the humanitarian potential of drone use</b></a>. From contributing to the international response to the 2014 earthquake in Nepal to the U.N.’s use of drones in the Democratic Republic of the Congo to protect civilians, to mapmaking flights by Peruvian archaeologists, UAV technology holds tremendous power."
+			content: "New America created a new database to <a href='https://www.newamerica.org/the-weekly-wonk/the-once-and-future-drones/'><b>track and highlight the humanitarian potential of drone use</b></a>. From contributing to the international response to the 2014 earthquake in Nepal to the U.N.’s use of drones in the Democratic Republic of the Congo to protect civilians, to mapmaking flights by Peruvian archaeologists, our database reveals new ways of harnessing UAV technologies."
 		},
 		{
 			title: "Growing Young Readers",
-			content: "TedX published New America Early Education Initiative Director Lisa Guernsey’s TedX talk on <a href='https://www.youtube.com/watch?v=P41_nyYY3Zg&noredirect=1'>&#8220;How the iPad affects young children, and what we can do about it.&#8221;</a> The YouTube video has attracted more than 12,000 views to date."
+			content: "TedX published New America Early Education Initiative Director Lisa Guernsey’s <b>TedX Talk</b> on <a href='https://www.youtube.com/watch?v=P41_nyYY3Zg&noredirect=1'>&#8220;How the iPad affects young children, and what we can do about it.&#8221;</a> The YouTube video has attracted thousands of views to date."
 		},
 		{
 			title: "From Moment to Movement",
@@ -32,11 +32,17 @@
 		{
 			title: "Charting the Future of War",
 			content: "Our inaugural <a href='https://www.newamerica.org/future-of-war/reflections-from-the-first-annual-conference-on-the-future-of-war-3/'><b>Future of War Conference</b></a>, held in February 2015, brought together a diverse collection of experts to discuss how warfare is changing. Twenty-two national media outlets sent reporters to cover the event and CNN live-streamed panels on both days."
+		},
+		{
+			title: "",
+			content: "Read our full <a href='public/documents/PDF-AnnualReport.pdf'>2014 Annual Report</a> to find out more about what we're doing at New America."
 		}
 	];
 
 	var el = document.getElementsByClassName('wrapper')[0],
 		c = React.createElement(Comp.Layout, { pages: data});
+
+	// console.log(React.renderToString(c));
 
 	React.render(c, el);
 

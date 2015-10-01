@@ -6,6 +6,7 @@ var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	copy = require('gulp-copy'),
 	uglify = require('gulp-uglify'),
+	util = require('gulp-util'),
 	minifyCss = require('gulp-minify-css');
 
 var opt = { es6module: true };
@@ -52,7 +53,7 @@ gulp.task('js', [ 'js-vendor', 'js-comp', 'js-source' ], function() {
 		'public/assets/scripts/_components.js',
 		'public/assets/scripts/_source.js'
 	]).pipe(concat('app.js'))
-		.pipe(uglify())
+		.pipe(util.env.type === 'production' ? uglify() : util.noop())
 		.pipe(gulp.dest('public/assets/scripts'));
 });
 
