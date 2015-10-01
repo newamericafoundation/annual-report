@@ -9,7 +9,11 @@ h1 {
 }
 
 p, a {
-	font-size: 22px;
+	@include font-size(17px);
+	@include bp-w-md {
+		font-size: 22px;
+	}
+	
 	line-height: 145%;
 }
 
