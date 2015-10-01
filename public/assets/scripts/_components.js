@@ -20,7 +20,8 @@ Comp.Layout = (function (_React$Component) {
 
 		_get(Object.getPrototypeOf(_class.prototype), 'constructor', this).call(this, props);
 		this.state = {
-			activePageIndex: 0
+			activePageIndex: 0,
+			opacity: 0
 		};
 		// This instance variable keeps track of whether mouse wheel interactions are allowed.
 		// It is set to false when mouse wheel interaction happens, and set to true again
@@ -33,7 +34,7 @@ Comp.Layout = (function (_React$Component) {
 		value: function render() {
 			return React.createElement(
 				'div',
-				{ className: 'ar' },
+				{ className: 'ar', style: { opacity: this.state.opacity } },
 				React.createElement(Comp.Header, null),
 				React.createElement(Comp.Pages, {
 					pages: this.props.pages,
@@ -143,6 +144,7 @@ Comp.Layout = (function (_React$Component) {
 					}
 				}
 			});
+			this.setState({ opacity: 1 });
 		}
 	}, {
 		key: 'componentWillUnmount',
@@ -152,39 +154,42 @@ Comp.Layout = (function (_React$Component) {
 	}]);
 
 	return _class;
-})(React.Component);
-Comp.Footer = (function (_React$Component2) {
-	_inherits(_class2, _React$Component2);
+})(React.Component);(function () {
 
-	function _class2() {
-		_classCallCheck(this, _class2);
+	var href = "public/documents/PDF-AnnualReport.pdf";
 
-		_get(Object.getPrototypeOf(_class2.prototype), 'constructor', this).apply(this, arguments);
-	}
+	Comp.Footer = (function (_React$Component2) {
+		_inherits(_class2, _React$Component2);
 
-	_createClass(_class2, [{
-		key: 'render',
-		value: function render() {
-			return React.createElement(
-				'footer',
-				{ className: 'ar__footer' },
-				React.createElement(
-					'a',
-					{ className: 'ar__footer__text-link', href: 'public/documents/PDF-AnnualReport.pdf' },
-					'Download the full annual report'
-				),
-				React.createElement(
-					'a',
-					{ className: 'ar__footer__icon-link', href: 'public/documents/PDF-AnnualReport.pdf' },
-					React.createElement(Comp.Icons.Page, null)
-				)
-			);
+		function _class2() {
+			_classCallCheck(this, _class2);
+
+			_get(Object.getPrototypeOf(_class2.prototype), 'constructor', this).apply(this, arguments);
 		}
-	}]);
 
-	return _class2;
-})(React.Component);
-Comp.Header = (function (_React$Component3) {
+		_createClass(_class2, [{
+			key: 'render',
+			value: function render() {
+				return React.createElement(
+					'footer',
+					{ className: 'ar__footer' },
+					React.createElement(
+						'a',
+						{ className: 'ar__footer__text-link', href: href },
+						'Download the full annual report'
+					),
+					React.createElement(
+						'a',
+						{ className: 'ar__footer__icon-link', href: href },
+						React.createElement(Comp.Icons.Page, null)
+					)
+				);
+			}
+		}]);
+
+		return _class2;
+	})(React.Component);
+})();;Comp.Header = (function (_React$Component3) {
 	_inherits(_class3, _React$Component3);
 
 	function _class3() {
@@ -210,8 +215,7 @@ Comp.Header = (function (_React$Component3) {
 	}]);
 
 	return _class3;
-})(React.Component);
-Comp.Icons.OldArrow = (function (_React$Component4) {
+})(React.Component);Comp.Icons.OldArrow = (function (_React$Component4) {
 	_inherits(_class4, _React$Component4);
 
 	function _class4() {
@@ -325,8 +329,7 @@ Comp.Icons.Page = (function (_React$Component7) {
 	}]);
 
 	return _class7;
-})(React.Component);
-Comp.Pages = (function (_React$Component8) {
+})(React.Component);Comp.Pages = (function (_React$Component8) {
 	_inherits(_class8, _React$Component8);
 
 	function _class8(props) {
