@@ -34,7 +34,7 @@
 			content: "Our inaugural <a href='https://www.newamerica.org/future-of-war/reflections-from-the-first-annual-conference-on-the-future-of-war-3/'><b>Future of War Conference</b></a>, held in February 2015, brought together a diverse collection of experts to discuss how warfare is changing. Twenty-two national media outlets sent reporters to cover the event and CNN live-streamed panels on both days."
 		},
 		{
-			title: "",
+			title: "Find out More",
 			content: "Read our full <a href='public/documents/PDF-AnnualReport.pdf'>2014 Annual Report</a> to find out more about what we're doing at New America."
 		}
 	];
