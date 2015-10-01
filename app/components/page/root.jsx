@@ -35,7 +35,6 @@ Comp.Pages = class extends React.Component {
 	renderPages() {
 		var pagesCount = this.props.pages.length;
 		return this.props.pages.map((page, i) => {
-			console.log(i === this.props.activePageIndex);
 			return (
 				<Comp.Page 
 					page={page}
@@ -51,7 +50,6 @@ Comp.Pages = class extends React.Component {
 		var self = this;
 		$(window).on('resize.pages', function() {
 			self.setState();
-			console.log('resizing');
 		});
 	}
 
