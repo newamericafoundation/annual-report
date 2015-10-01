@@ -156,8 +156,6 @@ Comp.Layout = (function (_React$Component) {
 	return _class;
 })(React.Component);(function () {
 
-	var href = "public/documents/PDF-AnnualReport.pdf";
-
 	Comp.Footer = (function (_React$Component2) {
 		_inherits(_class2, _React$Component2);
 
@@ -175,13 +173,23 @@ Comp.Layout = (function (_React$Component) {
 					{ className: 'ar__footer' },
 					React.createElement(
 						'a',
-						{ className: 'ar__footer__text-link', href: href },
-						'Download the full annual report'
+						{ className: 'ar__footer__text-link', href: 'public/documents/PDF-AnnualReport.pdf' },
+						'Download PDF'
 					),
 					React.createElement(
 						'a',
-						{ className: 'ar__footer__icon-link', href: href },
+						{ className: 'ar__footer__text-link', href: 'https://www.newamerica.org/contribute/' },
+						'Donate'
+					),
+					React.createElement(
+						'a',
+						{ className: 'ar__footer__icon-link', href: 'public/documents/PDF-AnnualReport.pdf' },
 						React.createElement(Comp.Icons.Page, null)
+					),
+					React.createElement(
+						'a',
+						{ className: 'ar__footer__icon-link', href: 'https://www.newamerica.org/contribute/' },
+						React.createElement(Comp.Icons.Heart, null)
 					)
 				);
 			}
@@ -329,17 +337,44 @@ Comp.Icons.Page = (function (_React$Component7) {
 	}]);
 
 	return _class7;
-})(React.Component);Comp.Pages = (function (_React$Component8) {
+})(React.Component);
+
+Comp.Icons.Heart = (function (_React$Component8) {
 	_inherits(_class8, _React$Component8);
 
-	function _class8(props) {
+	function _class8() {
 		_classCallCheck(this, _class8);
 
-		_get(Object.getPrototypeOf(_class8.prototype), 'constructor', this).call(this, props);
-		this.state = { pageWidth: 0 };
+		_get(Object.getPrototypeOf(_class8.prototype), 'constructor', this).apply(this, arguments);
 	}
 
 	_createClass(_class8, [{
+		key: 'render',
+		value: function render() {
+			return React.createElement(
+				'svg',
+				{ viewBox: '223 293 100 100' },
+				React.createElement(
+					'g',
+					null,
+					React.createElement('path', { d: 'M269.1,384.1c-2.1-2.5-7.4-7.3-11.8-10.8c-12.9-10.2-14.7-11.6-19.9-16.7 c-9.7-9.3-13.8-18.6-13.8-31.2c0-6.2,0.4-8.5,2.1-12.2c2.8-6.2,7-10.8,12.2-13.6c3.7-2,5.6-2.9,11.9-2.9c6.5,0,7.9,0.8,11.8,3 c4.7,2.7,9.5,8.4,10.5,12.5l0.6,2.5l1.5-3.5c8.6-19.6,36-19.3,45.5,0.5c3,6.3,3.4,19.7,0.7,27.3c-3.5,9.9-10.1,17.4-25.3,28.9 c-10,7.6-21.3,19-22,20.6C272.3,390.4,273.1,388.8,269.1,384.1z' })
+				)
+			);
+		}
+	}]);
+
+	return _class8;
+})(React.Component);Comp.Pages = (function (_React$Component9) {
+	_inherits(_class9, _React$Component9);
+
+	function _class9(props) {
+		_classCallCheck(this, _class9);
+
+		_get(Object.getPrototypeOf(_class9.prototype), 'constructor', this).call(this, props);
+		this.state = { pageWidth: 0 };
+	}
+
+	_createClass(_class9, [{
 		key: 'render',
 		value: function render() {
 			return React.createElement(
@@ -376,7 +411,6 @@ Comp.Icons.Page = (function (_React$Component7) {
 
 			var pagesCount = this.props.pages.length;
 			return this.props.pages.map(function (page, i) {
-				console.log(i === _this2.props.activePageIndex);
 				return React.createElement(Comp.Page, {
 					page: page,
 					pagesCount: pagesCount,
@@ -391,7 +425,6 @@ Comp.Icons.Page = (function (_React$Component7) {
 			var self = this;
 			$(window).on('resize.pages', function () {
 				self.setState();
-				console.log('resizing');
 			});
 		}
 	}, {
@@ -401,19 +434,19 @@ Comp.Icons.Page = (function (_React$Component7) {
 		}
 	}]);
 
-	return _class8;
+	return _class9;
 })(React.Component);
 
-Comp.Page = (function (_React$Component9) {
-	_inherits(_class9, _React$Component9);
+Comp.Page = (function (_React$Component10) {
+	_inherits(_class10, _React$Component10);
 
-	function _class9() {
-		_classCallCheck(this, _class9);
+	function _class10() {
+		_classCallCheck(this, _class10);
 
-		_get(Object.getPrototypeOf(_class9.prototype), 'constructor', this).apply(this, arguments);
+		_get(Object.getPrototypeOf(_class10.prototype), 'constructor', this).apply(this, arguments);
 	}
 
-	_createClass(_class9, [{
+	_createClass(_class10, [{
 		key: 'render',
 		value: function render() {
 			var style = {
@@ -458,5 +491,5 @@ Comp.Page = (function (_React$Component9) {
 		}
 	}]);
 
-	return _class9;
+	return _class10;
 })(React.Component);
