@@ -7,7 +7,7 @@
 		}, 
 		{ 
 			title: "Champions of Net Neutrality",
-			content: "New America’s <a href='https://www.newamerica.org/oti/'>Open Technology Institute</a> played a central role in engineering the <b>surprise victory of Net Neutrality</b> through the passage of the 2015 Open Internet Order. OTI logged more visits to educate the Federal Communications Commission than any other public interest group. The FCC’s order captured every key recommendation and cited OTI 19 times."
+			content: "New America’s <a href='https://www.newamerica.org/oti/'>Open Technology Institute</a> played a central role in engineering the <b>surprise victory of Net Neutrality</b>. OTI logged more visits to educate the Federal Communications Commission than any other public interest group. The FCC’s Open Internet order captured every key recommendation and cited OTI 19 times."
 		}, 
 		{ 
 			title: "Moving Young Learners Forward",
@@ -15,7 +15,7 @@
 		},
 		{
 			title: "Award Winning Ideas",
-			content: "New America fellow Anand Gopal’s <a href='https://www.newamerica.org/fellows/no-good-men-among-the-living/'><i>No Good Men Among the Living</i></a> was a <b>2014 National Book Award Finalist</b>. Along with New America fellow Dana Goldstein’s <a href='https://www.newamerica.org/fellows/the-teacher-wars/'><i>The Teacher Wars</i></a>, it was listed among <i>The New York Times’s</i> <a href='http://www.nytimes.com/2014/12/07/books/review/100-notable-books-of-2014.html'>100 notable books of 2014.</a> New America fellows Brigid Schulte’s <a href='https://www.newamerica.org/fellows/overwhelmed/'><i>Overwhelmed</i></a> and Chris Leonard’s <a href='https://www.newamerica.org/fellows/the-meat-racket/'><i>The Meat Racket</i></a> were selected by The Washington Post as <a href='https://www.washingtonpost.com/entertainment/books/50-notable-works-of-nonfiction/2014/11/20/51afca5e-3dc6-11e4-b03f-de718edeb92f_story.html'>notable nonfiction books of 2014</a>."
+			content: "New America fellow Anand Gopal’s <a href='https://www.newamerica.org/fellows/no-good-men-among-the-living/'><i>No Good Men Among the Living</i></a> was a <b>2014 National Book Award Finalist</b>. Along with New America fellow Dana Goldstein’s <a href='https://www.newamerica.org/fellows/the-teacher-wars/'><i>The Teacher Wars</i></a>, it was listed among <i>The New York Times’s</i> <a href='http://www.nytimes.com/2014/12/07/books/review/100-notable-books-of-2014.html'>100 notable books of 2014.</a> New America fellows Brigid Schulte’s <a href='https://www.newamerica.org/fellows/overwhelmed/'><i>Overwhelmed</i></a> and Chris Leonard’s <a href='https://www.newamerica.org/fellows/the-meat-racket/'><i>The Meat Racket</i></a> were selected by <i>The Washington Post</i> as <a href='https://www.washingtonpost.com/entertainment/books/50-notable-works-of-nonfiction/2014/11/20/51afca5e-3dc6-11e4-b03f-de718edeb92f_story.html'>notable nonfiction books of 2014</a>."
 		},
 		{
 			title: "Harnessing the Humanitarian Power of Drones",
@@ -31,7 +31,7 @@
 		},
 		{
 			title: "Charting the Future of War",
-			content: "Our inaugural <a href='https://www.newamerica.org/future-of-war/reflections-from-the-first-annual-conference-on-the-future-of-war-3/'><b>Future of War Conference</b></a>, held in February 2015, brought together a diverse collection of experts to discuss how warfare is changing. Twenty-two national media outlets sent reporters to cover the event and CNN live-streamed panels on both days."
+			content: "Our inaugural <a href='https://www.newamerica.org/future-of-war/reflections-from-the-first-annual-conference-on-the-future-of-war-3/'><b>Future of War Conference</b></a>, brought together a diverse collection of experts to discuss how warfare is changing. Twenty-two national media outlets sent reporters to cover the event and CNN live-streamed panels on both days."
 		},
 		{
 			title: "Find out More",
