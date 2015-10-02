@@ -34,7 +34,7 @@
 	var el = document.getElementsByClassName('wrapper')[0],
 	    c = React.createElement(Comp.Layout, { pages: data });
 
-	// console.log(React.renderToString(c));
+	console.log(React.renderToString(c));
 
 	React.render(c, el);
 })();
