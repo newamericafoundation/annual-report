@@ -34,7 +34,10 @@
 	var el = document.getElementsByClassName('wrapper')[0],
 	    c = React.createElement(Comp.Layout, { pages: data });
 
-	console.log(React.renderToString(c));
+	// console.log(React.renderToString(c));
+
+	// Developer signature.
+	console.log('Hi, Mom!');
 
 	React.render(c, el);
 })();

@@ -15,15 +15,18 @@ Comp.Pages = class extends React.Component {
 	}
 
 	getStyle() {
+		var transform = this.getTransform();
 		return {
-			transform: this.getTransform(),
+			transform: transform,
+			WebkitTransform: `${transform}`,
 			transition: 'transform 500ms cubic-bezier(0, 0, 0.25, 1)',
+			WebkiTransition: 'transform 500ms cubic-bezier(0, 0, 0.25, 1)',
 			height: `${100 * this.props.pages.length}%`
 		};
 	}
 
 	getTransform() {
-		var pageHeight = document.body.offsetHeight,
+		var pageHeight = $(window).height(),
 			transform = `translate3d(0, -${this.props.activePageIndex * pageHeight}px, 0)`;
 		return transform;
 	}
