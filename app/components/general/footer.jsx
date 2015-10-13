@@ -2,6 +2,10 @@
 
 Comp.Footer = class extends React.Component {
 
+	/*
+	 *
+	 *
+	 */
 	render() {
 		return (
 			<footer className='ar__footer'>

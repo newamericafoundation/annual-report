@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: "SimplonNorm-Regular-WebS";
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-weight: normal;
 }
 
@@ -30,4 +31,9 @@ html, body {
     background-position: 100% 0%;
 }
 
-svg { fill: #fffaef; }
+svg { 
+    fill: #fffaef;
+    -ms-transform-origin: 50% 50%; /* IE 9 */
+    -webkit-transform-origin: 50% 50%; /* Chrome, Safari, Opera */
+    transform-origin: 50% 50%;
+}

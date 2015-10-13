@@ -1,5 +1,9 @@
 Comp.Header = class extends React.Component {
 
+	/*
+	 *
+	 *
+	 */
 	render() {
 		return (
 			<header className='ar__header'>

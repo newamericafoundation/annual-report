@@ -18,7 +18,7 @@ Comp.Icons.Arrow = class extends React.Component {
 
 	render() {
 		return (
-			<svg viewBox="0 0 100 100" transform='rotate(180)'>
+			<svg viewBox="0 0 100 100">
 				<g transform={`rotate(${this.props.rotate - 90} 50 50)`}>
 					<polygon points="45.9,98.8 45.9,16.2 33.3,29.3 27.4,23.7 47.1,3.3 50,0.4 52.9,3.3 72.6,23.7 66.7,29.3 54.1,16.2 54.1,98.8 "/>
 				</g>

@@ -1,40 +1,62 @@
 Comp.Pages = class extends React.Component {
 
+	/*
+	 *
+	 *
+	 */
 	constructor(props) {
 		super(props);
 		this.state = { pageWidth: 0 };
 	}
 
+
+	/*
+	 *
+	 *
+	 */
 	render() { 
 		return (
-			<ul className='ar__pages' ref='container' style={this.getStyle()} onScroll={this.handleScroll.bind(this)}>
+			<ul className='ar__pages' ref='container' style={this.getStyle()}>
 				{ this.renderPages() }
 			</ul>
 		);
 
 	}
 
+
+	/*
+	 *
+	 *
+	 */
 	getStyle() {
-		var transform = this.getTransform();
+		var transform = this.getUnprefixedTransform();
 		return {
 			transform: transform,
-			WebkitTransform: `${transform}`,
+			//transform: `-ms-${transform}`,
+			WebkitTransform: transform,
 			transition: 'transform 500ms cubic-bezier(0, 0, 0.25, 1)',
-			WebkiTransition: 'transform 500ms cubic-bezier(0, 0, 0.25, 1)',
+			//transition: '-ms-transform 500ms cubic-bezier(0, 0, 0.25, 1)',
+			WebkitTransition: '-webkit-transform 500ms cubic-bezier(0, 0, 0.25, 1)',
 			height: `${100 * this.props.pages.length}%`
 		};
 	}
 
-	getTransform() {
+
+	/*
+	 *
+	 *
+	 */
+	getUnprefixedTransform() {
 		var pageHeight = $(window).height(),
 			transform = `translate3d(0, -${this.props.activePageIndex * pageHeight}px, 0)`;
 		return transform;
 	}
 
-	handleScroll(e) {
-		console.log(e);
-	}
 
+	/*
+	 *
+	 *
+	 */
 	renderPages() {
 		var pagesCount = this.props.pages.length;
 		return this.props.pages.map((page, i) => {
@@ -49,6 +71,11 @@ Comp.Pages = class extends React.Component {
 		});
 	}
 
+
+	/*
+	 *
+	 *
+	 */
 	componentDidMount() {
 		var self = this;
 		$(window).on('resize.pages', function() {
@@ -56,6 +83,11 @@ Comp.Pages = class extends React.Component {
 		});
 	}
 
+
+	/*
+	 *
+	 *
+	 */
 	componentWillUnmount() {
 		$(window).off('resize.pages');
 	}
@@ -64,6 +96,11 @@ Comp.Pages = class extends React.Component {
 
 Comp.Page = class extends React.Component {
 
+
+	/*
+	 *
+	 *
+	 */
 	render() {
 		var style = {
 			height: `${100 / this.props.pagesCount}%`

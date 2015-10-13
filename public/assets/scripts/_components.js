@@ -167,6 +167,11 @@ Comp.Layout = (function (_React$Component) {
 
 		_createClass(_class2, [{
 			key: 'render',
+
+			/*
+    *
+    *
+    */
 			value: function render() {
 				return React.createElement(
 					'footer',
@@ -208,6 +213,11 @@ Comp.Layout = (function (_React$Component) {
 
 	_createClass(_class3, [{
 		key: 'render',
+
+		/*
+   *
+   *
+   */
 		value: function render() {
 			return React.createElement(
 				'header',
@@ -264,7 +274,7 @@ Comp.Icons.Arrow = (function (_React$Component5) {
 		value: function render() {
 			return React.createElement(
 				'svg',
-				{ viewBox: '0 0 100 100', transform: 'rotate(180)' },
+				{ viewBox: '0 0 100 100' },
 				React.createElement(
 					'g',
 					{ transform: 'rotate(' + (this.props.rotate - 90) + ' 50 50)' },
@@ -367,6 +377,11 @@ Comp.Icons.Heart = (function (_React$Component8) {
 })(React.Component);Comp.Pages = (function (_React$Component9) {
 	_inherits(_class9, _React$Component9);
 
+	/*
+  *
+  *
+  */
+
 	function _class9(props) {
 		_classCallCheck(this, _class9);
 
@@ -374,39 +389,56 @@ Comp.Icons.Heart = (function (_React$Component8) {
 		this.state = { pageWidth: 0 };
 	}
 
+	/*
+  *
+  *
+  */
+
 	_createClass(_class9, [{
 		key: 'render',
 		value: function render() {
 			return React.createElement(
 				'ul',
-				{ className: 'ar__pages', ref: 'container', style: this.getStyle(), onScroll: this.handleScroll.bind(this) },
+				{ className: 'ar__pages', ref: 'container', style: this.getStyle() },
 				this.renderPages()
 			);
 		}
+
+		/*
+   *
+   *
+   */
 	}, {
 		key: 'getStyle',
 		value: function getStyle() {
-			var transform = this.getTransform();
+			var transform = this.getUnprefixedTransform();
 			return {
 				transform: transform,
-				WebkitTransform: '' + transform,
+				//transform: `-ms-${transform}`,
+				WebkitTransform: transform,
 				transition: 'transform 500ms cubic-bezier(0, 0, 0.25, 1)',
-				WebkiTransition: 'transform 500ms cubic-bezier(0, 0, 0.25, 1)',
+				//transition: '-ms-transform 500ms cubic-bezier(0, 0, 0.25, 1)',
+				WebkitTransition: '-webkit-transform 500ms cubic-bezier(0, 0, 0.25, 1)',
 				height: 100 * this.props.pages.length + '%'
 			};
 		}
+
+		/*
+   *
+   *
+   */
 	}, {
-		key: 'getTransform',
-		value: function getTransform() {
+		key: 'getUnprefixedTransform',
+		value: function getUnprefixedTransform() {
 			var pageHeight = $(window).height(),
 			    transform = 'translate3d(0, -' + this.props.activePageIndex * pageHeight + 'px, 0)';
 			return transform;
 		}
-	}, {
-		key: 'handleScroll',
-		value: function handleScroll(e) {
-			console.log(e);
-		}
+
+		/*
+   *
+   *
+   */
 	}, {
 		key: 'renderPages',
 		value: function renderPages() {
@@ -422,6 +454,11 @@ Comp.Icons.Heart = (function (_React$Component8) {
 				});
 			});
 		}
+
+		/*
+   *
+   *
+   */
 	}, {
 		key: 'componentDidMount',
 		value: function componentDidMount() {
@@ -430,6 +467,11 @@ Comp.Icons.Heart = (function (_React$Component8) {
 				self.setState();
 			});
 		}
+
+		/*
+   *
+   *
+   */
 	}, {
 		key: 'componentWillUnmount',
 		value: function componentWillUnmount() {
@@ -451,6 +493,11 @@ Comp.Page = (function (_React$Component10) {
 
 	_createClass(_class10, [{
 		key: 'render',
+
+		/*
+   *
+   *
+   */
 		value: function render() {
 			var style = {
 				height: 100 / this.props.pagesCount + '%'

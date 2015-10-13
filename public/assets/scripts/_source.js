@@ -34,6 +34,7 @@
 	var el = document.getElementsByClassName('wrapper')[0],
 	    c = React.createElement(Comp.Layout, { pages: data });
 
+	// Log render result so the page can be generated server-side.
 	// console.log(React.renderToString(c));
 
 	// Developer signature.
