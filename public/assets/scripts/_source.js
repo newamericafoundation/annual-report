@@ -36,5 +36,8 @@
 
 	// console.log(React.renderToString(c));
 
+	// Developer signature.
+	console.log('Hi, Mom!');
+
 	React.render(c, el);
 })();
