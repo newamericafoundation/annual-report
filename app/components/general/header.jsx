@@ -1,16 +1,15 @@
-Comp.Header = class extends React.Component {
+import React from 'react'
+import { Naf } from './icons.jsx'
 
-	/*
-	 *
-	 *
-	 */
-	render() {
-		return (
-			<header className='ar__header'>
-				<Comp.Icons.Naf />
-				<h1>New America</h1>
-			</header>
-		);
-	}
+function Header(props) {
+
+	return (
+		<header className='ar__header'>
+			<Naf />
+			<h1>New America</h1>
+		</header>
+	)
 
 }
+
+export default Header
